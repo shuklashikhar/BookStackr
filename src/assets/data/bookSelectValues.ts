@@ -1,0 +1,55 @@
+import { selectItemType } from '../../components/FormComponents/FormTypes';
+
+export const bookCategories = [
+	{ value: 'business', label: 'Business', color: '#3c78d8' },
+	{ value: 'self help', label: 'Self Help', color: '#45818e' },
+	{ value: 'psychology', label: 'Psychology', color: '#e69138' },
+	{ value: 'personal development', label: 'Personal Development', color: '#76a5af' },
+	{ value: 'technology', label: 'Technology', color: '#bf9000' },
+	{ value: 'finance', label: 'Finance', color: '#8e7cc3' },
+	{ value: 'programming', label: 'Programming', color: '#f1c232' },
+	{ value: 'computer science', label: 'Computer Science', color: '#ffd966' },
+	{ value: 'science', label: 'Science', color: '#3d85c6' },
+	{ value: 'biography', label: 'Biography', color: '#00ff00' },
+	{ value: 'entrepreneurship', label: 'Entrepreneurship', color: '#6d9eeb' },
+	{ value: 'economics', label: 'Economics', color: '#a4c2f4' },
+	{ value: 'productivity', label: 'Productivity', color: '#a2c4c9' },
+	{ value: 'physics', label: 'Physics', color: '#6fa8dc' },
+	{ value: 'history', label: 'History', color: '#b45f06' },
+	{ value: 'philosophy', label: 'Philosophy', color: '#f6b26b' },
+	{ value: 'money', label: 'Money', color: '#d9d2e9' },
+	{ value: 'war', label: 'War', color: '#ff0000' },
+	{ value: 'politics', label: 'Politics', color: '#f9cb9c' },
+	{ value: 'space', label: 'Space', color: '#b7b7b7' },
+	{ value: 'leadership', label: 'Leadership', color: '#d0e0e3' },
+	{ value: 'astronomy', label: 'Astronomy', color: '#999999' },
+	{ value: 'investing', label: 'Investing', color: '#b4a7d6' },
+	{ value: 'management', label: 'Management', color: '#c9daf8' },
+	{ value: 'biology', label: 'Biology', color: '#9fc5e8' },
+	{ value: 'evolution', label: 'Evolution', color: '#cfe2f3' },
+	{ value: 'relationships', label: 'Relationships', color: '#c27ba0' },
+	{ value: 'sexuality', label: 'Sexuality', color: '#a64d79' },
+	{ value: 'artificial intelligence', label: 'Artificial Intelligence', color: '#ffe599' },
+	{ value: 'health', label: 'Health', color: '#6aa84f' },
+	{ value: 'longevity', label: 'Longevity', color: '#93c47d' },
+	{ value: 'spirituality', label: 'Spirituality', color: '#b6d7a8' },
+	{ value: 'travel', label: 'Travel', color: '#ff9900' },
+	{ value: 'adventure', label: 'Adventure', color: '#d5a6bd' },
+	{ value: 'fiction', label: 'Fiction', color: '#ff00ff' },
+	{ value: 'novel', label: 'Novel', color: '#00ffff' },
+	{ value: 'crime', label: 'Crime', color: '#e06666' },
+	{ value: 'anthropology', label: 'Anthropology', color: '#4a86e8' },
+	{ value: 'science fiction', label: 'Science Fiction', color: '#ffff00' },
+] as const;
+
+export const bookMediums: selectItemType[] = [
+	{ value: 'audio', label: 'Audio' },
+	{ value: 'e-book', label: 'E-book' },
+	{ value: 'paper', label: 'Paper' },
+];
+
+export const bookStatuses: selectItemType[] = [
+	{ value: 'read', label: 'Read' },
+	{ value: 'reading', label: 'Reading' },
+	{ value: 'want to read', label: 'Want to read' },
+];

@@ -1,0 +1,129 @@
+.modal-overlay {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: all 0.3s;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	padding-top: 13vh;
+	align-items: flex-start;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 0.33);
+	opacity: 0;
+	transition: 0.3s;
+	pointer-events: none;
+}
+
+.modal-overlay.show {
+	opacity: 1;
+	pointer-events: all;
+	z-index: 10000;
+	padding-top: 10vh;
+}
+
+.modal {
+	display: none;
+}
+
+.modal-overlay.show .modal {
+	display: block;
+	padding: 1.5rem;
+	padding-top: 1rem;
+	border-radius: 6px;
+	border: solid 2px var(--light);
+	background-color: var(--dark);
+	position: relative;
+	width: min(95%, 650px);
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.close-container {
+	position: absolute;
+	top: 16px;
+	right: 24px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--light);
+	transition: 0.3s;
+	padding: 0.125rem;
+	font-size: 1.5rem;
+}
+
+.modal-header {
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.25rem;
+	border-bottom: solid 1px var(--light);
+	user-select: none;
+}
+
+.modal-body {
+	padding: 1rem 0;
+}
+
+.modal-footer {
+	margin-top: 1.5rem;
+	gap: 1rem;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+/* Modal form styles */
+.form-group {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 10px;
+}
+
+.error {
+	color: var(--primary);
+	margin-top: 0.25rem;
+	width: 100%;
+}
+
+.form-group input {
+	width: 100%;
+}
+
+.input-group-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	width: 100%;
+}
+
+.input-group {
+	flex-basis: calc(50% - 1rem);
+	flex-grow: 1;
+	flex-shrink: 1;
+	position: relative;
+}
+
+.form-group label {
+	display: block;
+	user-select: none;
+	margin-bottom: 0.25rem;
+}
+
+.form-group label span {
+	color: var(--primary);
+}
+
+@media only screen and (max-width: 576px) {
+	.input-group {
+		flex: 1 1 100% !important;
+	}
+
+	.modal-overlay.show {
+		padding: 1rem 0;
+	}
+
+	.modal-overlay.show .modal {
+		max-height: 100%;
+	}
+}
