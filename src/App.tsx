@@ -43,14 +43,14 @@ const App: FC = () => {
 		});
 
 		return unsubscribe;
-	}, []);
+	}, [dispatch, userInitialized]);
 
 	useEffect(() => {
 		if (userInitialized) {
 			// Get books after firebase auth has been checked.
 			dispatch(getBooks());
 		}
-	}, [userInitialized, user]);
+	}, [dispatch, userInitialized, user]);
 
 	return (
 		<>

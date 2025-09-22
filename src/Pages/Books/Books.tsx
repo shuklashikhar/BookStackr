@@ -24,13 +24,14 @@ const Books: FC = () => {
 			toast.error(error);
 		}
 	}, [message, error]);
+	const dispatch = useDispatch<any>();
 
 	useEffect(() => {
 		// Clean up errors and messages on page unmount.
 		return () => dispatch(resetMessageAndError());
-	}, []);
+	}, [dispatch]);
 
-	const dispatch = useDispatch<any>();
+	
 
 	return (
 		<>

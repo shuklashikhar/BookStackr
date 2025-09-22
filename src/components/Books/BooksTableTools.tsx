@@ -54,7 +54,7 @@ const BooksTableTools: FC = () => {
 		}, 250);
 
 		return () => clearTimeout(bounce);
-	}, [internalQuery]);
+	}, [dispatch, internalQuery]);
 
 	const handleDebounce = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInternalQuery(e.target.value);
